@@ -1,4 +1,5 @@
 package main.java.com.stackroute.pe2;
+
 /*
 Finds all files of a folder and selects only given extension file name and display content of that file.
  */
@@ -6,7 +7,6 @@ Finds all files of a folder and selects only given extension file name and displ
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class FindAllFiles {
 

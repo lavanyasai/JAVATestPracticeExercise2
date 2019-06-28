@@ -1,5 +1,9 @@
 package main.java.com.stackroute.pe2;
 
+/*
+Read the file content and display content of that file.
+ */
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
