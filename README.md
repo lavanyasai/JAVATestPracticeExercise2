@@ -34,7 +34,6 @@ Enter the grade for student 1: 86
 Enter the grade for student 2: 65
 Enter the grade for student 3: 98
 Enter the grade for student 4: 77
-
 The average is 81.50
 The minimum is 65
 The maximum is 98
@@ -65,7 +64,6 @@ read content of this file using byte array
 ------------------------------------------------------------------------------------------------------------------------
 
 9. Write a program to calculate the frequency of the words in a given file,
-
 Example: Create a file named FileDemo.txt with the following content
 i am a man ,
 i like to sleep ,
