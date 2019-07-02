@@ -18,11 +18,9 @@ public class FileContent {
             while ((letter = fileReader.read()) != -1) {
                 content = content + (char) letter;
             }
-            System.out.println("Contents of the file are " + content);
-            System.out.println("Length of the file is " + (content.length() - 1));
         }
         catch(IOException exception) {
-            return "IOException";
+            content = "IOException";
         }
         return content;
     }

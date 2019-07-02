@@ -11,6 +11,7 @@ import java.io.IOException;
 public class FindAllFiles {
 
     public static String findAndReadFiles(String[] names) throws IOException {
+        String result = "";
         try {
             File directory = new File(names[0]);
 
@@ -25,11 +26,12 @@ public class FindAllFiles {
 
             byte[] fileContent = new byte[(int) file.length()];
             fileInputStream.read(fileContent);
-            String content = new String(fileContent);
-            return content;
+            result = new String(fileContent);
+            return result;
         }
         catch (Exception exception) {
-            return "Exception";
+            result = "Exception";
         }
+        return result;
     }
 }

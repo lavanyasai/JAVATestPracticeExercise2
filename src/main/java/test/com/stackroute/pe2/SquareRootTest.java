@@ -19,15 +19,22 @@ public class SquareRootTest {
     }
 
     @Test
-    public void checkWhetherNumberIsPower() {
+    public void givenNumberReturnItIsPowerOfFour() {
         actualResult = squareRoot.checkWhetherItIsPowerOrNot(16);
         expectedResult = "It is a power of 4";
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkWhetherNumberIsPowerOrNot() {
+    public void givenNumberReturnItIsNotPowerOfFour() {
         actualResult = squareRoot.checkWhetherItIsPowerOrNot(25);
+        expectedResult = "It is not a power of 4";
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void givenNegativeNumberReturnItIsNotPowerOfFour() {
+        actualResult = squareRoot.checkWhetherItIsPowerOrNot(-16);
         expectedResult = "It is not a power of 4";
         assertEquals(expectedResult, actualResult);
     }

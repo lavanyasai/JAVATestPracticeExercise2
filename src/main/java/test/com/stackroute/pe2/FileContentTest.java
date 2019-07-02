@@ -4,6 +4,7 @@ import main.java.com.stackroute.pe2.FileContent;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class FileContentTest {
 
-    FileContent fileContent;
+    private FileContent fileContent;
     String expectedResult;
     String actualResult;
 
@@ -22,14 +23,14 @@ public class FileContentTest {
     }
 
     @Test
-    public void checkWhetherFileContentIsCorrect() throws IOException {
+    public void givenCorrectFileReturnsContentOfTheFile() throws IOException {
         actualResult = fileContent.readFileContent(new File("src/main/java/com/stackroute/pe2/file.txt"));
         expectedResult = "Calculates the frequency of the words in a given file\n";
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkWhetherFileIsPresent() throws IOException {
+    public void givenFileThatDoesNotExistReturnsIOException() throws IOException {
         actualResult = fileContent.readFileContent(new File("file.txt"));
         expectedResult = "IOException";
         assertEquals(expectedResult, actualResult);

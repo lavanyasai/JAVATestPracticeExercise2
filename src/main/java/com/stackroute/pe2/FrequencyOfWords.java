@@ -14,6 +14,7 @@ public class FrequencyOfWords {
     }
 
     public static String frequencyOfWords(String fileName) throws IOException {
+        String result = "";
         try {
             File file = new File(fileName);
             FileInputStream fileInputStream = new FileInputStream(file);
@@ -22,7 +23,6 @@ public class FrequencyOfWords {
             fileInputStream.read(fileContent);
             String content = new String(fileContent);
 
-            String result = "";
             String words[] = content.split(" ");
             int count[] = new int[words.length];
             for (int i = 0; i < words.length; i++) {
@@ -35,11 +35,10 @@ public class FrequencyOfWords {
             for (int i = 0; i < words.length; i++) {
                 result = result + words[i] + "-" + count[i];
             }
-            System.out.println(result);
-            return result;
         }
         catch(Exception exception) {
-            return "Exception";
+            result = "Exception";
         }
+        return result;
     }
 }

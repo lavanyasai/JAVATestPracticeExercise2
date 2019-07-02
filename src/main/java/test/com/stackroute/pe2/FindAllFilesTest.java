@@ -21,14 +21,14 @@ public class FindAllFilesTest {
     }
 
     @Test
-    public void checkWhetherFileContentIsCorrect() throws IOException {
+    public void givenCorrectFileReturnsContentOfTheFile() throws IOException {
         actualResult = findAllFiles.findAndReadFiles(new String[] {"src/main/java/com/stackroute/pe2/", "file.txt"});
         expectedResult = "Calculates the frequency of the words in a given file\n";
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkWhetherFileIsPresent() throws IOException {
+    public void givenFileThatDoesNotExistReturnsException() throws IOException {
         actualResult = findAllFiles.findAndReadFiles(new String[] {"", "file.txt"});
         expectedResult = "Exception";
         assertEquals(expectedResult, actualResult);

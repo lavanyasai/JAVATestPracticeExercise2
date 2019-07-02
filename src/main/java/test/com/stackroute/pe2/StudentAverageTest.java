@@ -19,16 +19,23 @@ public class StudentAverageTest {
     }
 
     @Test
-    public void checkTheAverageOfStudents() {
+    public void givenArrayOfFourgradesReturnsAverageMinimumMaximumOfGrades() {
         actualResult = studentAverage.calculateStudentsAverage(4, new int[]{10, 20, 30, 40});
         expectedResult = "25.01040";
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkTheAverageResultOfStudents() {
+    public void givenArrayOfOnegradesReturnsAverageMinimumMaximumOfGrades() {
         actualResult = studentAverage.calculateStudentsAverage(1, new int[]{10});
         expectedResult = "10.01010";
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void givenArrayOfZerogradesReturnsAverageMinimumMaximumOfGrades() {
+        actualResult = studentAverage.calculateStudentsAverage(1, new int[]{});
+        expectedResult = "";
         assertEquals(expectedResult, actualResult);
     }
 

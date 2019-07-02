@@ -8,9 +8,10 @@ Takes input as integer and returns true if input is even.
 
 public class EvenNum {
     public static boolean isEven(int inputNumber) {
+        boolean result = false;
         if((inputNumber%2) == 0) {
-            return true;
+            result = true;
         }
-        return false;
+        return result;
     }
 }

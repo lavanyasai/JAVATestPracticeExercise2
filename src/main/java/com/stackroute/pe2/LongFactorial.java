@@ -7,9 +7,6 @@ List all the factorials that can be expressed as an int (i.e., 32-bit signed int
  */
 
 public class LongFactorial {
-    public static void main(String[] args) {
-        longFactorial();
-    }
 
     public static String longFactorial() {
         double result = 1;
@@ -30,7 +27,6 @@ public class LongFactorial {
             result = 1;
             inputNumber++;
         }
-        System.out.println(longResult);
         return longResult;
     }
 }

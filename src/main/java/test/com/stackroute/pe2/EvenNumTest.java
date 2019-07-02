@@ -1,6 +1,8 @@
 package main.java.test.com.stackroute.pe2;
 
 import main.java.com.stackroute.pe2.EvenNum;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,27 +13,27 @@ public class EvenNumTest {
     Boolean actualResult;
     Boolean expectedResult;
 
-    @org.junit.Before
-    public void setUp() throws Exception {
+    @Before
+    public void setUp() {
         evenNum = new EvenNum();
     }
 
     @Test
-    public void checkWhetherTheNumberIsEven() {
-        actualResult = evenNum.isEven(12);;
+    public void givenNumberReturnsNumberIsEven() {
+        actualResult = evenNum.isEven(12);
         expectedResult = true;
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkWhetherTheNumberIsOdd() {
+    public void givenNumberReturnsNumberIsOdd() {
         actualResult = evenNum.isEven(13);
         expectedResult = false;
         assertEquals(expectedResult, actualResult);
     }
 
-    @org.junit.After
-    public void tearDown() throws Exception {
+    @After
+    public void tearDown() {
         evenNum = null;
     }
 }

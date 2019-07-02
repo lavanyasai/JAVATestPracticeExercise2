@@ -22,7 +22,7 @@ public class FrequencyOfWordsTest {
     }
 
     @Test
-    public void checkWhetherTheFrequencyOfWordsIsCorrect() {
+    public void givenFileReturnsFrequencyOfWordsIsCorrect() {
         try {
             actualResult = frequencyOfWords.frequencyOfWords("src/main/java/com/stackroute/pe2/file.txt");
         } catch (IOException e) {
@@ -33,7 +33,7 @@ public class FrequencyOfWordsTest {
     }
 
     @Test
-    public void checkWhetherTheFileIsCorrect() {
+    public void givenFileThatDoesNotExistReturnsException() {
         try {
             actualResult = frequencyOfWords.frequencyOfWords("file.txt");
         } catch (IOException e) {

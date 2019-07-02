@@ -19,16 +19,16 @@ public class MemberTest {
     }
 
     @Test
-    public void checkWhetherTheDetailsAreCorrect() {
+    public void givenDetailsOfStudentMemberReturnsTheirDetails() {
         actualResult = memberVariable.memberDetails(new String[] {"Stackroute", "23", "20000"});
         expectedResult = "Name: StackrouteAge: 23Salary: 20000";
         assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void checkTheResultForEmptyValues() {
-        actualResult = memberVariable.memberDetails(new String[] {"Stackroute", "", ""});
-        expectedResult = "Name: StackrouteAge: Salary: ";
+    public void givenEmptyDetailsOfStudentMemberReturnsNothing() {
+        actualResult = memberVariable.memberDetails(new String[] {"", "", ""});
+        expectedResult = "Name: Age: Salary: ";
         assertEquals(expectedResult, actualResult);
     }
 
