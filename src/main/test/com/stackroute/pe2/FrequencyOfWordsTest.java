@@ -1,11 +1,10 @@
-package main.java.test.com.stackroute.pe2;
+package main.test.com.stackroute.pe2;
 
 import main.java.com.stackroute.pe2.FrequencyOfWords;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
 import java.io.IOException;
 
 import static org.junit.Assert.*;

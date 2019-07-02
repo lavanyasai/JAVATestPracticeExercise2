@@ -1,4 +1,4 @@
-package main.java.test.com.stackroute.pe2;
+package main.test.com.stackroute.pe2;
 
 import main.java.com.stackroute.pe2.MemberVariable;
 import org.junit.After;
